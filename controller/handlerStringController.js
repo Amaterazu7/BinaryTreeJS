@@ -62,14 +62,10 @@ module.exports.getSum = (stringToAdd) => {
     const add = (str) => {
         const idx = Number( str.match(/[0-9]{1}/) );
         this.total += idx;
-
         console.log(`:: Total ADDED :: >> ${this.total}`);
 
         if (this.total > 9) this.total = add_two_digits(this.total);
-        if (str.length === 0) {
-            console.log(`::: TOTAL ::: >>> ${this.total}`);
-            return this.total;
-        }
+        if (str.length === 0) return;
 
         add(str.substr(1, str.length));
     };

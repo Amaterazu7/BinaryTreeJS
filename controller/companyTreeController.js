@@ -44,7 +44,7 @@ module.exports.buildTree = (employeeArrayList) => {
             });
         }
     };
-    searchTree(this.root);
 
+    searchTree(this.root);
     return this.root;
 };
