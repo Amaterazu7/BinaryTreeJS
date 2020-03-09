@@ -2,9 +2,11 @@
   "name": "base",
   "version": "1.0.0",
   "description": "Dummy test",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "clean-install": "rm -rf node_modules/ dist/ ; npm i",
+    "start-nodemon": "nodemon ./bin/www",
+    "start": "node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,6 +15,12 @@
   "dependencies": {
     "express": "^4.17.1",
     "lodash": "^4.17.15",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.2",
+    "debug": "~2.6.9",
+    "buffer": "^5.4.3",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.4",
+    "morgan": "~1.9.1",
+    "uuid": "^3.3.3"
   }
 }

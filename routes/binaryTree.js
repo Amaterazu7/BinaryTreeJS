@@ -1,12 +1,12 @@
 'use strict';
 
-const BST = require('./model/BST');
-
 const express = require('express');
-const server = express();
-const port = 3000;
-server.get('/', (req, res) => handler(res));
-server.listen(port, () => console.log(`Base app listening on port ==> :${port}`));
+const router = express.Router();
+const BST = require('../model/BST');
+
+router.get(`/`, (req, res, next) => {
+    handler(res);
+});
 
 const handler = (res) => {
     let tree = new BST();
@@ -37,3 +37,5 @@ const handler = (res) => {
 
     res.send('NODES CREATED! \n');
 };
+
+module.exports = router;
