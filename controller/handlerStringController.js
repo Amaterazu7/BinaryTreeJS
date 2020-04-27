@@ -73,3 +73,37 @@ module.exports.getSum = (stringToAdd) => {
     add(stringToAdd);
     return this.total;
 };
+
+/**
+ * ==== EXERCISE 3 =====
+ * Given a word like 'madam' 
+ * Return -----> [ TRUE==isPalindrome ; FALSE==isNotPalindrome ]
+ */
+/**
+ * @param {String} word - 'madam'
+ * @returns {Boolean} result - true
+ */
+module.exports.isPalindrome = (word) => {
+    const w = word.toUpperCase();
+    const lth = w.length;
+  
+    let begin  = 0;
+    let end    = lth - 1;
+    let middle = (begin + end)/2;
+    let i = 0;
+    
+    for (i; i <= middle; i++) {
+      if(w.charAt(begin) === w.charAt(end)) {
+        begin++;
+        end--;
+      } else {
+        break;
+      }
+    }
+    
+    if( i === (middle+1) ) {
+       return true;
+    } else {
+       return false;
+    }
+  }

@@ -14,4 +14,10 @@ router.get(`/sumString`, (req, res, next) => {
     res.send(`::: Finish Successfully! The Total >>> ${total} ::: \n`);
 });
 
+
+router.post(`/isPalindrome`, (req, res, next) => {
+    const itIs = handlerStringController.isPalindrome(req.body.word);
+    res.send(`::: Finish Successfully! The Word isPalindrome?? >>> ${itIs} ::: \n`);
+});
+
 module.exports = router;
