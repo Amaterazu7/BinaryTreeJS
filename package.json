@@ -13,7 +13,7 @@
   "author": "Diego Leonel Cañete Crescini",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "lodash": "^4.17.15",
     "nodemon": "^2.0.2",
     "debug": "~2.6.9",
